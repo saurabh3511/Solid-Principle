@@ -1,17 +1,22 @@
 package solid.D;
 
 
- class Windows98Machine {
+ class businesslogic{
+     public logic Dal;
+     public businesslogic(logic logicLayer){
+         Dal =  logicLayer;
+     }
+     void save(object details){
+         Dal.Save(details);
+     }
+ }
 
-    private final StandardKeyboard keyboard;
-    private final Monitor monitor;
-
-    public Windows98Machine() {
-        monitor = new Monitor();
-        keyboard = new StandardKeyboard();
-    }
-
-}
+ class logic{
+     public void Save(object details){
+    // perform save 
+     }
+ }
 public class InvalidDependency{
 //Here, we're using the dependency injection pattern to facilitate adding the Keyboard dependency into the Windows98Machine class.
+
 }

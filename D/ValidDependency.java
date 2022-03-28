@@ -1,18 +1,23 @@
 package solid.D;
 
 
- interface Keyboard { }
-public class Windows98Machine{
-
-    private final Keyboard keyboard;
-    private final Monitor monitor;
-
-    public Windows98Machine(Keyboard keyboard, Monitor monitor) {
-        this.keyboard = keyboard;
-        this.monitor = monitor;
+class businesslogic{
+    public logic Dal;
+    public businesslogic(logic logicLayer){
+        Dal =  logicLayer;
+    }
+    void save(object details){
+        Dal.Save(details);
     }
 }
-public class StandardKeyboard implements Keyboard { }
+interface logic{
+    void save(object deatils);
+}
+class DataAccess implements logic{
+    public void Save(object details){
+
+    }
+}
 public class ValidDependency{
 //decoupling is done in other to remove dependency of modules
 }
